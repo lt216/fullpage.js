@@ -2,7 +2,6 @@ class FullPage {
   static init(selector) {
     return new FullPage(selector)
   }
-
   constructor(selector) {
     const parentElement = document.querySelector(selector)
     if (!parentElement) {
