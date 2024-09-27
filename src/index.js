@@ -1,6 +1,15 @@
 class FullPage {
-  constructor() {
-    const parentElement = document.getElementById("section2")
+  static init(selector) {
+    return new FullPage(selector)
+  }
+
+  constructor(selector) {
+    const parentElement = document.querySelector(selector)
+    if (!parentElement) {
+      console.error(`无法找到选择器: ${selector}`)
+      return
+    }
+
     this.sections = parentElement.children
     this.currentSection = 0
     this.isScrolling = false
@@ -183,8 +192,3 @@ class FullPage {
 
 // 导出插件
 export default FullPage
-
-// 在页面加载时实例化 FullPage 类
-document.addEventListener("DOMContentLoaded", () => {
-  new FullPage()
-})
