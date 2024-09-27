@@ -7,9 +7,9 @@ import livereload from "rollup-plugin-livereload"
 export default {
   input: "src/index.js", // 入口文件
   output: {
-    file: "dist/fullscreen-scroll.js",
+    file: "dist/full-page-scroll.js",
     format: "umd",
-    name: "FullscreenScroll"
+    name: "FullPage"
   },
   plugins: [
     resolve(),
